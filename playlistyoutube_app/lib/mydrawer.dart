@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:playlistyoutube_app/screen/aqidah.dart';
+import 'package:playlistyoutube_app/screen/fiqih.dart';
+import 'package:playlistyoutube_app/screen/murotal.dart';
+import 'package:playlistyoutube_app/screen/nasihat.dart';
 
 class MyDrawer extends StatelessWidget {
   @override
@@ -22,7 +26,9 @@ class MyDrawer extends StatelessWidget {
                 child: ListTile(
                   leading: Icon(Icons.menu),
                   title: Text('Aqidah & Manhaj', style: TextStyle(fontSize: 18.0),),
-                  onTap: (){},
+                  onTap: ()=>Navigator.of(context).push(
+                    MaterialPageRoute(builder: (BuildContext context)=> AqidahPage())
+                  ),
                 ),
               ),
               Divider(),
@@ -30,8 +36,10 @@ class MyDrawer extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: ListTile(
                   leading: Icon(Icons.menu),
-                  title: Text('Fiqih Ibadah', style: TextStyle(fontSize: 18.0),),
-                  onTap: (){},
+                  title: Text('Fiqih', style: TextStyle(fontSize: 18.0),),
+                  onTap: ()=>Navigator.of(context).push(
+                      MaterialPageRoute(builder: (BuildContext context)=> FiqihPage())
+                  ),
                 ),
               ),
               Divider(),
@@ -40,7 +48,9 @@ class MyDrawer extends StatelessWidget {
                 child: ListTile(
                   leading: Icon(Icons.menu),
                   title: Text('Murotal', style: TextStyle(fontSize: 18.0),),
-                  onTap: (){},
+                  onTap: ()=>Navigator.of(context).push(
+                      MaterialPageRoute(builder: (BuildContext context)=> MurotalPage())
+                  ),
                 ),
               ),
               Divider(),
@@ -49,7 +59,9 @@ class MyDrawer extends StatelessWidget {
                 child: ListTile(
                   leading: Icon(Icons.menu),
                   title: Text('Nasihat Ulama', style: TextStyle(fontSize: 18.0),),
-                  onTap: (){},
+                  onTap: ()=>Navigator.of(context).push(
+                      MaterialPageRoute(builder: (BuildContext context)=> NasihatPage())
+                  ),
                 ),
               ),
               Divider(),
