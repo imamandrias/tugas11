@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'package:playlistyoutube_app/mydrawer.dart';
 import 'package:http/http.dart' as http;
 
@@ -57,7 +58,11 @@ class PlayList extends StatelessWidget {
           child: Column(
             children: [
               GestureDetector(
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => VideoPlayer("https://youtube.com/embed/${list[index]['contentDetails']['videoId']}")
+                  ));
+                },
                 child: Container(
                   height: 230,
                   decoration: BoxDecoration(
@@ -76,6 +81,23 @@ class PlayList extends StatelessWidget {
           ),
         );
       },
+    );
+  }
+}
+
+//class berfungsi sebagai pembuka link videonya
+class VideoPlayer extends StatelessWidget {
+  final String url;
+  VideoPlayer(this.url);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Center(
+        child: WebviewScaffold(
+          url: url,
+        ),
+      ),
     );
   }
 }
