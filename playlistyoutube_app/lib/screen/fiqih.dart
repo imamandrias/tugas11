@@ -80,7 +80,7 @@ class _FiqihPageState extends State<FiqihPage> {
         mainAxisSpacing: 8.0,
         padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
         children: [
-          myList(Icons.live_tv, 'Fikih Haji', 0xffed622b,
+          myList(Icons.live_tv, 'Fikih Puasa', 0xffed622b,
               'https://fikihhaji.herokuapp.com/'),
           myList(Icons.live_tv, 'Fikih Pendidikan Anak', 0xff26cb3c,
               'https://pendidikananak.herokuapp.com/'),
