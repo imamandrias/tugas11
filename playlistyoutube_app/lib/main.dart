@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:playlistyoutube_app/mydrawer.dart';
 
-
 void main() {
   runApp(MyApp());
 }
