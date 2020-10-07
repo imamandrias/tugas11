@@ -37,11 +37,11 @@ class MyDrawer extends StatelessWidget {
               CustomListTile(Icons.menu, 'Aqidah & Manhaj',  ()=>Navigator.of(context).push(
                   MaterialPageRoute(builder: (BuildContext context)=> AqidahPage())
               )),
-              CustomListTile(Icons.menu, 'Fiqih',  ()=>Navigator.of(context).push(
-                  MaterialPageRoute(builder: (BuildContext context)=> MurotalPage())
+              CustomListTile(Icons.menu, 'Fikih',  ()=>Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext context)=> FiqihPage())
               )),
               CustomListTile(Icons.menu, 'Murotal',  ()=>Navigator.of(context).push(
-                  MaterialPageRoute(builder: (BuildContext context)=> FiqihPage())
+                  MaterialPageRoute(builder: (BuildContext context)=> MurotalPage())
               )),
               CustomListTile(Icons.menu, 'Nasihat Ulama',  ()=>Navigator.of(context).push(
                   MaterialPageRoute(builder: (BuildContext context)=> NasihatPage())

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:playlistyoutube_app/mydrawer.dart';
 
 import '../list_video.dart';
 
@@ -55,23 +56,6 @@ class _AqidahPageState extends State<AqidahPage> {
                         ),
                       ),
                     ),
-
-                    //link youtube
-/*
-                    Material(
-                      child: InkWell(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => ListVideo(
-                              title: heading,
-                              url: link,
-                            ),
-                          ));
-                        },
-                      ),
-                    )
-*/
-
                   ],
                 )
               ],
@@ -85,6 +69,7 @@ class _AqidahPageState extends State<AqidahPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MyDrawer(),
       appBar: AppBar(
         title: Text('Aqidah & Manhaj'),
         backgroundColor: Colors.cyan,
